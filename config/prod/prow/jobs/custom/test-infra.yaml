@@ -343,9 +343,7 @@ periodics:
       command:
       - /autobump.sh
       args:
-      - /etc/prow-auto-bumper-github-token/token
-      - "Knative Prow Updater Robot"
-      - knative-prow-updater-robot@google.com
+      - --config = "config/prod/prow/knative-autobump-config.yaml"
       volumeMounts:
       - name: test-account
         mountPath: /etc/test-account
